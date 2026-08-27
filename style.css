@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("style.css");
 /* Body */
 body {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
