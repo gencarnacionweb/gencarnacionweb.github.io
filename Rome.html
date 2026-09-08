@@ -3,310 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Travel Gallery</title>
+    <title>Summer Fun in the Dominican Republic - My Travel Gallery</title>
     <style>
-        /* Color Palette & Variables */
-        :root {
-            --bg-color: #ffffff;
-            --card-bg: #f7fcfd;
-            --text-dark: #1e293b;
-            --text-muted: #64748b;
-            --aqua-primary: #00b4d8;
-            --aqua-light: #e0f7fa;
-            --border-color: #e2e8f0;
-        }
-
-        /* Base Reset & Fonts */
-        * {
-            box-sizing: border-box;
+        /* Base and Typography */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #2d3748;
+            background-color: #ffffff;
             line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--bg-color);
-            padding: 0 20px;
         }
-
         a {
-            color: var(--aqua-primary);
             text-decoration: none;
+            color: #00a8cc; /* Brand Cyan */
             transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #007a99;
         }
 
         /* Header Navigation */
         header {
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 25px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--aqua-light);
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
         .logo {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            letter-spacing: -0.5px;
+            font-size: 24px;
+            font-weight: bold;
         }
-
-        .logo span {
-            color: var(--aqua-primary);
-        }
-
+        .logo .dark { color: #1a202c; }
+        .logo .brand { color: #00a8cc; }
+        
         nav a {
-            color: var(--text-muted);
-            margin-left: 24px;
+            margin-left: 25px;
+            color: #718096;
             font-weight: 500;
-            font-size: 0.95rem;
         }
-
         nav a:hover {
-            color: var(--aqua-primary);
+            color: #00a8cc;
         }
 
-        /* Hero Banner */
-        .hero {
-            max-width: 1050px;
-            margin: 30px auto 0;
-            background-color: var(--aqua-light);
-            padding: 40px;
-            border-radius: 12px;
+        /* Post Header (Hero Section) */
+        .post-hero {
+            background-color: #eaf8fa; /* Light cyan matching homepage hero */
             text-align: center;
+            padding: 60px 20px;
+            border-radius: 12px;
+            max-width: 1120px;
+            margin: 20px auto;
         }
-
-        .hero h1 {
-            font-size: 2.2rem;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        /* Main Layout Grid */
-        .container {
-            max-width: 1050px;
-            margin: 40px auto;
-            display: grid;
-            grid-template-columns: 2.2fr 1fr;
-            gap: 40px;
-        }
-
-        /* Blog Post Cards */
-        .post-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 10px;
-            padding: 30px;
-            margin-bottom: 30px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .post-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 180, 216, 0.08);
-        }
-
         .post-meta {
-            font-size: 0.85rem;
-            color: var(--aqua-primary);
-            font-weight: 600;
+            color: #00a8cc;
+            font-size: 13px;
+            font-weight: bold;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-
-        .post-title {
-            font-size: 1.6rem;
-            margin-bottom: 12px;
-        }
-
-        .post-title a {
-            color: var(--text-dark);
-        }
-
-        .post-title a:hover {
-            color: var(--aqua-primary);
-        }
-
-        .post-excerpt {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-size: 0.98rem;
-        }
-
-        .read-more {
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-
-        /* Sidebar */
-        aside {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .widget {
-            background: var(--bg-color);
-            border: 1px solid var(--border-color);
-            padding: 24px;
-            border-radius: 10px;
-        }
-
-        .widget-title {
-            font-size: 1.1rem;
+            letter-spacing: 1.2px;
             margin-bottom: 15px;
-            color: var(--text-dark);
-            border-left: 4px solid var(--aqua-primary);
-            padding-left: 10px;
+        }
+        .post-title {
+            font-size: 36px;
+            color: #1a202c;
+            margin: 0 0 15px 0;
+        }
+        .post-subtitle {
+            color: #4a5568;
+            font-size: 18px;
         }
 
-        .widget p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
+        /* Main Content and Gallery */
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .content-container p {
+            color: #4a5568;
+            font-size: 17px;
+            margin-bottom: 30px;
         }
 
-        .widget-list {
-            list-style: none;
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .photo-card {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #edf2f7;
+            background: #fcfcfc;
+        }
+        .photo-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: #e2e8f0; /* Placeholder color */
+            min-height: 400px; /* Remove when adding actual images */
+        }
+        .photo-caption {
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #718096;
+            text-align: center;
+            border-top: 1px solid #edf2f7;
         }
 
-        .widget-list li {
-            margin-bottom: 10px;
-            font-size: 0.95rem;
-        }
-
-        .widget-list a {
-            color: var(--text-muted);
-        }
-
-        .widget-list a:hover {
-            color: var(--aqua-primary);
+        /* Navigation Back */
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-weight: 600;
         }
 
         /* Footer */
         footer {
-            max-width: 1050px;
-            margin: 60px auto 30px auto;
             text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+            padding: 30px 20px;
+            color: #a0aec0;
+            font-size: 14px;
+            border-top: 1px solid #edf2f7;
+            margin-top: 60px;
         }
 
-        /* Mobile Responsiveness */
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 10px;
-            }
-
-            .hero h1 {
-                font-size: 1.75rem;
-            }
+            header { flex-direction: column; gap: 15px; padding: 20px; }
+            .post-title { font-size: 28px; }
+            .post-hero { margin: 10px; padding: 40px 15px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navbar -->
+    <!-- Header Navigation -->
     <header>
-        <a href="#" class="logo">My<span> Blog</span></a>
+        <a href="index.html" class="logo">
+            <span class="dark">My</span> <span class="brand">Blog</span>
+        </a>
         <nav>
-            <a href="https://gencarnacionweb.github.io/">Home</a> 
-        <a href="mailto:gencarnacion@crimson.ua.edu">Contact</a> </nav>
+            <a href="index.html">Home</a>
+            <a href="mailto:gencarnacion@crimson.ua.edu">Contact</a>
+        </nav>
     </header>
 
-    <!-- Hero Banner -->
-    <section class="hero">
-        <h1>Welcome to my Travel Gallery</h1>
-        <p>Where I share snapshots of my favorite destinations.</p>
-</section>
+    <!-- Post Header -->
+    <section class="post-hero">
+        <div class="post-meta">EUROPE • SEPTEMBER 2022</div>
+        <h1 class="post-title">Exploring Rome</h1>
+        <div class="post-subtitle">Discover some of my favorite snapshots.</div>
+    </section>
 
-    <!-- Main Content Area -->
-    <div class="container">
-        
-        <!-- Blog Posts -->
-        <main>
-            <article class="post-card">
-                <div class="post-meta">The Caribbean • July 2023</div>
-                <h2 class="post-title"><a href="#">Summer Fun in the Dominican Republic</a></h2>
-                <p class="post-excerpt">Discover some of my favorite snapshots.</p>
-            <a href="https://photos.app.goo.gl/FkPbqN4VJBsbZndJ6">View Photos →</a> </article>
+    <!-- Main Content & Gallery -->
+    <main class="content-container">
+        <p>Welcome to my Rome travel diary! Experiencing the streets of this ancient city was incredible. Here are a few snapshots from my favorite moments exploring the streets, ruins, and architecture.</p>
 
-			<article class="post-card">
-                <div class="post-meta">Europe • September 2022</div>
-                <h2 class="post-title"><a href="#">Exploring Rome</a></h2>
-                <p class="post-excerpt">Discover some of my favorite snapshots.</p>
-            <a href="https://photos.app.goo.gl/vr6H7cYcvhmqGcJ29">View Photos →</a> </article>
-			
-			<article class="post-card">
-                <div class="post-meta">Europe • September 2022</div>
-                <h2 class="post-title"><a href="#">Sightseeing in Milan</a></h2>
-                <p class="post-excerpt">Discover some of my favorite snapshots.</p>
-            <a href="https://photos.app.goo.gl/hAYGjv8Xq9hfX77o8">View Photos →</a> </article>
-			
-            <article class="post-card">
-                <div class="post-meta">The United Kingdom • October 2019</div>
-                <h2 class="post-title"><a href="#">A Rainy Day in London</a></h2>
-                <p class="post-excerpt">Discover some of my favorite snapshots.</p>
-            <a href="https://photos.app.goo.gl/d439x2wknfQfAgfN8">View Photos →</a> </article>
-
-            <article class="post-card">
-                <div class="post-meta">Europe • October 2019</div>
-                <h2 class="post-title"><a href="#">An Afternoon in Barcelona</a></h2>
-                <p class="post-excerpt">Discover some of my favorite snapshots.</p>
-            <a href="https://photos.app.goo.gl/FcYkXKCDV5WvrHvT8">View Photos →</a> </article>
-			
-			<article class="post-card">
-                <div class="post-meta">The United States • November 2016</div>
-                <h2 class="post-title"><a href="#">Discovering the Sights of Chicago</a></h2>
-                <p class="post-excerpt">Discover some of my favorite snapshots.</p>
-            <a href="https://photos.app.goo.gl/5HpLwSjPXRG2osGK7">View Photos →</a> </article>
-        </main>
-
-        <!-- Sidebar -->
-        <aside>
-            <div class="widget">
-                <h3 class="widget-title">About Me</h3>
-                <p>Hi, my name is Giselle, and I love to travel and explore new places. Check out the photos of some of my favorite destinations.</p>
+        <div class="gallery-grid">
+            <!-- Photo 1 -->
+            <div class="photo-card">
+                <!-- Replace src with your actual image path -->
+                <img src="rome8.jpg" alt="Sightseeing View" class="photo-img">
+                <div class="photo-caption">Sightseeing from a city tour bus as we pass by the Colosseum.</div>
             </div>
 
-            <div class="widget">
-                <h3 class="widget-title">Most Recent Destinations</h3>
-                <ul class="widget-list">
-                    <li><a href="https://www.google.com/maps/search/Dominican+Republic">Dominican Republic</a></li>
-                    <li><a href="https://www.google.com/maps/place/London,+UK/">London</a></li>
-                    <li><a href="https://www.google.com/maps/place/Barcelona,+Spain/">Barcelona</a></li>
-                  <li><a href="https://www.google.com/maps/place/Rome,+Metropolitan+City+of+Rome+Capital,+Italy/">Rome</a></li>
-                </ul>
+            <!-- Photo 2 -->
+            <div class="photo-card">
+                <img src="rome5.jpg" alt="Street shop" class="photo-img">
+                <div class="photo-caption">Spotting a cute little gelato shop.</div>
             </div>
-        </aside>
-
-    </div>
+            
+            <!-- Photo 3 -->
+            <div class="photo-card">
+                <img src="rome11.jpg" alt="Trevi fountain" class="photo-img">
+                <div class="photo-caption">Enjoying the beautiful Trevi Fountain.</div>
+            </div>
+        </div>
+		<p></p>
+		<p><a href="https://photos.app.goo.gl/vr6H7cYcvhmqGcJ29">Click here for more photos.</a></p>
+		
+        <a href="index.html" class="back-link">← Back to Travel Gallery</a>
+    </main>
 
     <!-- Footer -->
     <footer>
-       <p>Giselle Encarnacion</p>
-		<p>LS 560: Create a Website Assignment</p>
-		<p>&copy; 2026</p>
+        LS 560: Create a Website Assignment<br>
+        © 2026 My Blog.
     </footer>
 
 </body>
