@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Fun in the Dominican Republic - My Travel Gallery</title>
+    <style>
+        /* Base and Typography */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #2d3748;
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: #00a8cc; /* Brand Cyan */
+            transition: color 0.2s ease;
+        }
+        a:hover {
+            color: #007a99;
+        }
+
+        /* Header Navigation */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .logo .dark { color: #1a202c; }
+        .logo .brand { color: #00a8cc; }
+        
+        nav a {
+            margin-left: 25px;
+            color: #718096;
+            font-weight: 500;
+        }
+        nav a:hover {
+            color: #00a8cc;
+        }
+
+        /* Post Header (Hero Section) */
+        .post-hero {
+            background-color: #eaf8fa; /* Light cyan matching homepage hero */
+            text-align: center;
+            padding: 60px 20px;
+            border-radius: 12px;
+            max-width: 1120px;
+            margin: 20px auto;
+        }
+        .post-meta {
+            color: #00a8cc;
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 15px;
+        }
+        .post-title {
+            font-size: 36px;
+            color: #1a202c;
+            margin: 0 0 15px 0;
+        }
+        .post-subtitle {
+            color: #4a5568;
+            font-size: 18px;
+        }
+
+        /* Main Content and Gallery */
+        .content-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .content-container p {
+            color: #4a5568;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .photo-card {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #edf2f7;
+            background: #fcfcfc;
+        }
+        .photo-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            background-color: #e2e8f0; /* Placeholder color */
+            min-height: 400px; /* Remove when adding actual images */
+        }
+        .photo-caption {
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #718096;
+            text-align: center;
+            border-top: 1px solid #edf2f7;
+        }
+
+        /* Navigation Back */
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #a0aec0;
+            font-size: 14px;
+            border-top: 1px solid #edf2f7;
+            margin-top: 60px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 15px; padding: 20px; }
+            .post-title { font-size: 28px; }
+            .post-hero { margin: 10px; padding: 40px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <a href="index.html" class="logo">
+            <span class="dark">My</span> <span class="brand">Blog</span>
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Post Header -->
+    <section class="post-hero">
+        <div class="post-meta">THE CARIBBEAN • JULY 2023</div>
+        <h1 class="post-title">Summer Fun in the Dominican Republic</h1>
+        <div class="post-subtitle">Discover some of my favorite snapshots.</div>
+    </section>
+
+    <!-- Main Content & Gallery -->
+    <main class="content-container">
+        <p>Welcome to my Dominican Republic travel diary! The crystal-clear waters and vibrant culture made this trip unforgettable. Here are a few snapshots from my favorite moments exploring the beaches and local towns.</p>
+
+        <div class="gallery-grid">
+            <!-- Photo 1 -->
+            <div class="photo-card">
+                <!-- Replace src with your actual image path -->
+                <img src="placeholder1.jpg" alt="Beautiful beach view" class="photo-img">
+                <div class="photo-caption">Relaxing by the crystal clear waters in Punta Cana.</div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="photo-card">
+                <img src="placeholder2.jpg" alt="Local cuisine" class="photo-img">
+                <div class="photo-caption">Enjoying some delicious local seafood by the shore.</div>
+            </div>
+            
+            <!-- Photo 3 -->
+            <div class="photo-card">
+                <img src="placeholder3.jpg" alt="Sunset walk" class="photo-img">
+                <div class="photo-caption">A perfect sunset to end an amazing day of sightseeing.</div>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Travel Gallery</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        LS 560: Create a Website Assignment<br>
+        © 2026 My Blog.
+    </footer>
+
+</body>
+</html>
