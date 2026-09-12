@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploring Rome - My Travel Gallery</title>
     <style>
-        /* Base and Typography */
         body {
             font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
@@ -16,14 +15,13 @@
         }
         a {
             text-decoration: none;
-            color: #00a8cc; /* Brand Cyan */
+            color: #00a8cc;
             transition: color 0.2s ease;
         }
         a:hover {
             color: #007a99;
         }
 
-        /* Header Navigation */
         header {
             display: flex;
             justify-content: space-between;
@@ -48,9 +46,8 @@
             color: #00a8cc;
         }
 
-        /* Post Header (Hero Section) */
         .post-hero {
-            background-color: #eaf8fa; /* Light cyan matching homepage hero */
+            background-color: #eaf8fa;
             text-align: center;
             padding: 60px 20px;
             border-radius: 12px;
@@ -75,7 +72,6 @@
             font-size: 18px;
         }
 
-        /* Main Content and Gallery */
         .content-container {
             max-width: 800px;
             margin: 40px auto;
@@ -103,8 +99,8 @@
             width: 100%;
             height: auto;
             display: block;
-            background-color: #e2e8f0; /* Placeholder color */
-            min-height: 400px; /* Remove when adding actual images */
+            background-color: #e2e8f0; 
+            min-height: 400px;
         }
         .photo-caption {
             padding: 15px 20px;
@@ -114,14 +110,12 @@
             border-top: 1px solid #edf2f7;
         }
 
-        /* Navigation Back */
         .back-link {
             display: inline-block;
             margin-top: 40px;
             font-weight: 600;
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 30px 20px;
@@ -131,7 +125,6 @@
             margin-top: 60px;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             header { flex-direction: column; gap: 15px; padding: 20px; }
             .post-title { font-size: 28px; }
@@ -141,7 +134,6 @@
 </head>
 <body>
 
-    <!-- Header Navigation -->
     <header>
         <a href="index.html" class="logo">
             <span class="dark">My</span> <span class="brand">Blog</span>
@@ -152,32 +144,26 @@
         </nav>
     </header>
 
-    <!-- Post Header -->
     <section class="post-hero">
         <div class="post-meta">Europe • September 2022</div>
         <h1 class="post-title">Exploring Rome</h1>
         <div class="post-subtitle">Discover some of my favorite snapshots.</div>
     </section>
 
-    <!-- Main Content & Gallery -->
     <main class="content-container">
         <p>Welcome to my Rome travel diary! Experiencing the streets of this ancient city was incredible. Here are a few snapshots from my favorite moments exploring the streets, ruins, and architecture.</p>
 
         <div class="gallery-grid">
-            <!-- Photo 1 -->
             <div class="photo-card">
-                <!-- Replace src with your actual image path -->
                 <img src="rome8.jpg" alt="Sightseeing View" class="photo-img">
                 <div class="photo-caption">Sightseeing from a city tour bus as we pass by the Colosseum.</div>
             </div>
 
-            <!-- Photo 2 -->
             <div class="photo-card">
                 <img src="rome5.jpg" alt="Street shop" class="photo-img">
                 <div class="photo-caption">Spotting a cute little gelato shop.</div>
             </div>
             
-            <!-- Photo 3 -->
             <div class="photo-card">
                 <img src="rome11.jpg" alt="Trevi fountain" class="photo-img">
                 <div class="photo-caption">Checking out the beautiful Trevi Fountain.</div>
@@ -189,7 +175,6 @@
         <a href="index.html" class="back-link">← Back to Travel Gallery</a>
     </main>
 
-    <!-- Footer -->
     <footer>
         LS 560: Create a Website Assignment<br>
         © 2026 My Blog.
