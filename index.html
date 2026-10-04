@@ -11,7 +11,33 @@
             padding: 0;
         }
 
-        body {
+        <body> 
+            <a href="#main-content" class="skip-link">Skip to main content</a> 
+	        <header> 
+                <!-- existing header content -->
+	        </header> 
+	
+	        <!-- make sure main has matching id -->
+	        <main id="main-content"> 
+		        <!-- existing articles --> 
+	        </main>
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #008080;
+            color: #fff;
+            padding: 8px;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }  
+        
+        {            
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #ffffff;
             color: #4b5563;
@@ -21,25 +47,25 @@
             margin: 0 auto;
         }
 
-        header {
+        <header> {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-bottom: 28px;
         }
 
-        header > a {
+        <header> a {
             font-size: 1.65rem;
             font-weight: 800;
             text-decoration: none;
             color: #1e293b;
         }
 
-        header > a span {
+        <header> a span {
             color: #22a9cf;
         }
 
-        nav a {
+        <nav> a {
             text-decoration: none;
             color: #4b5563;
             font-weight: 500;
@@ -48,7 +74,7 @@
             transition: color 0.2s ease;
         }
 
-        nav a:hover {
+        <nav> a:hover {
             color: #22a9cf;
         }
 
@@ -352,23 +378,24 @@
         <aside>
             <div>
                 <h3>About Me</h3>
-                <p>Hi, my name is Giselle, and I love to travel and explore new places. Check out the photos of some of my favorite destinations.</p>
+                <p> Hi, my name is <strong>Giselle</strong>, and I <em>love</em> to travel and explore new places. Check out the photos of some of my favorite destinations.</p>
             </div>
 
             <div>
-                <h3>Most Recent Destinations</h3>
-                <ul>
+                <h3>Top 4 Favorite Destinations</h3>
+                <ol>
                     <li><a href="Dominican_Republic.html">Dominican Republic</a></li>
                     <li><a href="London.html">London</a></li>
                     <li><a href="Barcelona.html">Barcelona</a></li>
                     <li><a href="Rome.html">Rome</a></li>
-                </ul>
+                </ol>
             </div>
         </aside>
     </div>
 
     <footer>
         <p>LS 560: Create a Website Assignment</p>
+        <p><a href="https://cis.ua.edu/departments/slis/">University of Alabama's School of Library and Information Studies</a>
         <p>© 2026 My Blog.</p>
     </footer>
 
